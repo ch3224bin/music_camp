@@ -1,0 +1,28 @@
+{
+  "name": "bmc",
+  "version": "1.0.0",
+  "description": "배철수 음악캠프 선곡표 제목 복사 도우미",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ch3224bin/music_camp.git"
+  },
+  "author": "ch3224.bin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ch3224bin/music_camp/issues"
+  },
+  "homepage": "https://github.com/ch3224bin/music_camp#readme",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "request": "^2.88.0"
+  }
+}
