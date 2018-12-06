@@ -15,5 +15,6 @@ var attachCopyEvent = function() {
         $temp.val($(this).prev('.title').text().trim()).select();
         document.execCommand('copy');
         $temp.remove();
+        $.notify("복사 되었습니다.", {delay: 500, allow_dismiss: false, placement: {from: "bottom", align: "center"}});
     });
 };

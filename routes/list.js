@@ -12,9 +12,33 @@ router.get('/', function(req, res, next) {
 
         var $ = cheerio.load(html);
         var list = $('body');
-        list.find('.title').after('<button class="copy">복사하기</button>');
-        res.send(list.html());
+        var html = '';
+        $('.music-list').each(function() {
+            var imgSrc = $(this).find('img').attr('src');
+            var title = $(this).find('.title').text().trim();
+            var singer = $(this).find('.singer').text().trim();
+            html += getRow(imgSrc, title, singer);
+        });
+        res.send(html);
     });
 });
+
+var getRow = function(imgSrc, title, singer) {
+    return `<div class="row mb-2">
+                    <div class="col-sm-12">
+                        <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                            <img class="media-object" src="${imgSrc}">
+                            </a>
+                        </div>
+                        <div class="media-body p-1">
+                            <div><span class="title media-heading h4 mr-1">${title}</span><button class="copy btn btn-outline-primary" type="submit">복사하기</button></div>
+                            <p class="h6">${singer}</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>`;
+}
 
 module.exports = router;
