@@ -27,15 +27,13 @@ var getRow = function(imgSrc, title, singer) {
     return `<div class="row mb-2">
                     <div class="col-sm-12">
                         <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                            <img class="media-object" src="${imgSrc}">
-                            </a>
-                        </div>
-                        <div class="media-body p-1">
-                            <div><span class="title media-heading h4 mr-1">${title}</span><button class="copy btn btn-outline-primary" type="submit">복사하기</button></div>
-                            <p class="h6">${singer}</p>
-                        </div>
+                            <div class="media-left">
+                                <img class="media-object mw-100" src="${imgSrc}">
+                            </div>
+                            <div class="media-body p-1">
+                                <div><span class="title media-heading h5 mr-1">${title}</span><button class="copy btn btn-outline-primary" type="submit">복사하기</button></div>
+                                <p class="h6">${singer}</p>
+                            </div>
                         </div>
                     </div>
                 </div>`;
